@@ -21,3 +21,6 @@ spring:
       auth: true
       starttls.enable: true
       ssl.trust: smtp.gmail.com
+security:
+  jwt-secret: U2ltcGx5IGVudGVyIHlvdXIgZGF0YSB0aGVuIHB1c2ggdGhlIGVuY29kZSBidXR0b24u
+  jwt-expiration: 86400000

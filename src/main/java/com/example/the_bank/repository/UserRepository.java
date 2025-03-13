@@ -5,7 +5,10 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
 
 @Repository
 @EnableJpaRepositories
@@ -20,4 +23,6 @@ public interface UserRepository extends JpaRepository<User,Long> {
 
     @Query("SELECT u FROM User u WHERE u.accountNumber = :accountNumber")
     User findByAccountNumber(String accountNumber);
+
+    Optional<User> findByEmail(String email);
 }

@@ -1,5 +1,6 @@
 package com.example.the_bank.dto;
 
+import com.example.the_bank.entity.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +21,8 @@ public class UserRequest {
     private String stateOfOrigin;
     private String accountNumber;
     private String email;
+    private String password;
     private String phoneNumber;
     private String alternativePhoneNumber;
+    private Role role;
 }
